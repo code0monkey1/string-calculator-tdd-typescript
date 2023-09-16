@@ -1,7 +1,7 @@
 export class StringCalculator {
   constructor() {}
   public add(str: string): number {
-    let tot = 0;
+    let sum = 0;
     let separators = this.getSeparators(str);
 
     if (this.hasCustomSeparators(str))
@@ -9,14 +9,14 @@ export class StringCalculator {
 
     const chars = str.split(new RegExp(`[${separators.join('')}]`));
 
-    if (this.hasNegatives(chars)) {
-      const negativeChars = this.getNegativeChars(chars);
+    if (this.hasNegatives(chars))
+      throw new Error(
+        'negatives not allowed: ' + this.getNegativeChars(chars).join(' ')
+      );
 
-      throw new Error('negatives not allowed: ' + negativeChars.join(' '));
-    }
-    tot = chars.reduce((tot, curr) => tot + this.charToInt(curr), 0);
+    sum = chars.reduce((tot, curr) => tot + this.charToInt(curr), 0);
 
-    return tot;
+    return sum;
   }
 
   private extractStringWithoutSeparators(str: string): string {
