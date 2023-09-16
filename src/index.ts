@@ -4,15 +4,16 @@ export class StringCalculator {
     let tot = 0;
     let separators = this.getSeparators(str);
 
-    if (this.hasCustomSeparators(str))
+    if (this.hasCustomSeparators(str)) {
       str = str.substring(str.indexOf('\n') + 1);
+    }
 
     const chars = str.split(new RegExp(`[${separators.join('')}]`));
 
     if (this.hasNegatives(chars)) {
       const negativeChars = this.getNegativeChars(chars);
 
-      throw new Error('negatives not allowed: ' + negativeChars.join(','));
+      throw new Error('negatives not allowed: ' + negativeChars.join(' '));
     }
     tot = chars.reduce((tot, curr) => tot + this.charToInt(curr), 0);
 
