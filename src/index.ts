@@ -1,7 +1,6 @@
 export class StringCalculator {
   constructor() {}
   public add(str: string): number {
-    let sum = 0;
     let separators = this.getSeparators(str);
 
     if (this.hasCustomSeparators(str))
@@ -14,8 +13,13 @@ export class StringCalculator {
         'negatives not allowed: ' + this.getNegative(chars).join(' ')
       );
 
-    sum = chars.reduce((tot, curr) => tot + this.charToInt(curr), 0);
+    let sum = this.getSum(chars);
 
+    return sum;
+  }
+
+  private getSum(chars: string[]) {
+    const sum = chars.reduce((tot, curr) => tot + this.charToInt(curr), 0);
     return sum;
   }
 
