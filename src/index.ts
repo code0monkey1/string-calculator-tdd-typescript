@@ -12,10 +12,8 @@ export class StringCalculator {
       console.log('new separators', new_separators);
 
       separators = [...separators, ...new_separators];
-      console.log('separators', separators);
 
       str = str.substring(endIndex + 1);
-      console.log('string left ', str);
     }
 
     const chars = str.split(new RegExp(`[${separators.join('')}]`));
