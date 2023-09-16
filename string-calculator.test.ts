@@ -115,20 +115,23 @@ describe('String Calculator', () => {
   });
 
   describe('Disallow  Negatives', () => {
-    it('throws error Negatives Not Allowed', () => {
-      const input = '1,-2,-3';
+    it.each([{ input: '', output: '' }])(
+      'throws error Negatives Not Allowed',
+      () => {
+        const input = '1,-2,-3';
 
-      //sut
-      const sut = new StringCalculator();
+        //sut
+        const sut = new StringCalculator();
 
-      const entry = input;
+        const entry = input;
 
-      //act
+        //act
 
-      //assert
-      expect(() => {
-        sut.add(entry);
-      }).toThrowError('negatives not allowed: -2 -3');
-    });
+        //assert
+        expect(() => {
+          sut.add(entry);
+        }).toThrowError('negatives not allowed: -2 -3');
+      }
+    );
   });
 });
