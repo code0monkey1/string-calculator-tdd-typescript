@@ -124,7 +124,6 @@ describe('String Calculator', () => {
       const entry = input;
 
       //act
-      const res = sut.add(entry);
 
       //assert
       expect(() => {

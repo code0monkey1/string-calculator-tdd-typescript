@@ -9,6 +9,11 @@ export class StringCalculator {
 
     const chars = str.split(new RegExp(`[${separators.join('')}]`));
 
+    if (this.hasNegatives(chars)) {
+      const negativeChars = this.getNegativeChars(chars);
+
+      throw new Error('negatives not allowed: ' + negativeChars.join(','));
+    }
     tot = chars.reduce((tot, curr) => tot + this.charToInt(curr), 0);
 
     return tot;
@@ -16,6 +21,14 @@ export class StringCalculator {
 
   private hasCustomSeparators(str: string) {
     return str.startsWith('//');
+  }
+
+  private hasNegatives(chars: string[]) {
+    return chars.some((char) => Number(char) < 0);
+  }
+
+  private getNegativeChars(chars: string[]) {
+    return chars.filter((char) => Number(char) < 0);
   }
 
   public charToInt(char: string) {
