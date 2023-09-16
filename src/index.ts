@@ -2,18 +2,20 @@ export class StringCalculator {
   constructor() {}
   public add(str: String): number {
     let tot = 0;
-    let separators: string[] = [];
+    let separators = ['\n', ','];
 
     if (str.startsWith('//')) {
       const endIndex = str.indexOf('\n');
 
-      separators = str.substring(2, endIndex).split('');
+      const new_separators = str.substring(2, endIndex).split('');
 
-      console.log('separators', separators);
+      separators = [...separators, ...new_separators];
     }
-    console.log(str);
-    const chars = str.split(/`[,${separators}\n]`/);
 
+    const regex = separators.join('|');
+    console.log('The regex is', regex);
+    const chars = str.split(new RegExp(regex));
+    console.log('The chars are');
     tot = chars.reduce((tot, curr) => tot + this.charToInt(curr), 0);
 
     return tot;
