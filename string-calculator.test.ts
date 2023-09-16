@@ -93,7 +93,7 @@ describe('String Calculator', () => {
   });
 
   describe('Custom Separators', () => {
-    it.each([{ input: '//;\n1;2', output: 6 }])(
+    it.each([{ input: '//;\n1;2', output: 3 }])(
       'will give output $output when input is $input',
       ({ input, output }) => {
         // arrange
