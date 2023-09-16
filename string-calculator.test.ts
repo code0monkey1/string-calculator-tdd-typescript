@@ -114,5 +114,22 @@ describe('String Calculator', () => {
     );
   });
 
-  describe('Disallow  Negatives', () => {});
+  describe('Disallow  Negatives', () => {
+    it('throws error Negatives Not Allowed', () => {
+      const input = '1,-2,-3';
+
+      //sut
+      const sut = new StringCalculator();
+
+      const entry = input;
+
+      //act
+      const res = sut.add(entry);
+
+      //assert
+      expect(() => {
+        sut.add(entry);
+      }).toThrowError('negatives not allowed: -2 -3');
+    });
+  });
 });
