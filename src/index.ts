@@ -9,8 +9,6 @@ export class StringCalculator {
 
     const chars = str.split(new RegExp(`[${separators.join('')}]`));
 
-    console.log('The chars are', chars);
-
     tot = chars.reduce((tot, curr) => tot + this.charToInt(curr), 0);
 
     return tot;
