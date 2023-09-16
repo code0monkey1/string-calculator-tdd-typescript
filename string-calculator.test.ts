@@ -139,11 +139,10 @@ describe('String Calculator', () => {
         const sut = new StringCalculator();
 
         //act
+        const res = sut.add(input);
 
         //assert
-        expect(() => {
-          sut.add(input);
-        }).toThrowError(`negatives not allowed: ${output}`);
+        expect(res).toBe(output);
       }
     );
   });
