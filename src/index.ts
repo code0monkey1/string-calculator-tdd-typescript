@@ -9,6 +9,7 @@ export class StringCalculator {
 
       const new_separators = str.substring(2, endIndex).split('');
 
+      console.log('new separators', new_separators);
       separators = [...separators, ...new_separators];
     }
 
