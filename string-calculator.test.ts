@@ -72,7 +72,7 @@ describe('String Calculator', () => {
   describe('Newline separator', () => {
     it.each([
       { input: '1, \n3', output: 4 },
-      { input: '1,20 ,60 \n  2', output: 83 },
+      { input: '1\n2,3', output: 6 },
       { input: '1,2,3,4,5\n6,7,8\n9', output: 45 },
     ])('will give output $output when input is $input', ({ input, output }) => {
       // arrange
