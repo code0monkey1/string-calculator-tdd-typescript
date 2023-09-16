@@ -12,10 +12,8 @@ export class StringCalculator {
       separators = [...separators, ...new_separators];
     }
 
-    const regex = separators.join('|');
-    console.log('The regex is', regex);
-    const chars = str.split(new RegExp(regex));
-    console.log('The chars are');
+    const chars = str.split(new RegExp(`\\n${separators.join()}`));
+    console.log('The chars are', chars);
     tot = chars.reduce((tot, curr) => tot + this.charToInt(curr), 0);
 
     return tot;
