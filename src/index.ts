@@ -9,9 +9,9 @@ export class StringCalculator {
 
     const chars = str.split(new RegExp(`[${separators.join('')}]`));
 
-    if (this.hasNegatives(chars))
+    if (this.hasNegative(chars))
       throw new Error(
-        'negatives not allowed: ' + this.getNegativeChars(chars).join(' ')
+        'negatives not allowed: ' + this.getNegative(chars).join(' ')
       );
 
     sum = chars.reduce((tot, curr) => tot + this.charToInt(curr), 0);
@@ -27,11 +27,11 @@ export class StringCalculator {
     return str.startsWith('//');
   }
 
-  private hasNegatives(chars: string[]) {
+  private hasNegative(chars: string[]) {
     return chars.some((char) => Number(char) < 0);
   }
 
-  private getNegativeChars(chars: string[]) {
+  private getNegative(chars: string[]) {
     return chars.filter((char) => Number(char) < 0);
   }
 
