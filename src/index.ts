@@ -2,14 +2,15 @@ export class StringCalculator {
   constructor() {}
   public add(str: String): number {
     let tot = 0;
-    let separators = '';
+    let separators: string[] = [];
 
     if (str.startsWith('//')) {
       const endIndex = str.indexOf('\n');
 
-      separators = str.substring(2, endIndex);
+      separators = str.substring(2, endIndex).split('');
     }
-    const chars = str.split(`/[,${separators}\n]/`);
+    console.log(separators);
+    const chars = str.split(/`[,${separators}\n]`/);
 
     tot = chars.reduce((tot, curr) => tot + this.charToInt(curr), 0);
 
