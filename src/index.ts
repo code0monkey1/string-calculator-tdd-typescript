@@ -4,9 +4,8 @@ export class StringCalculator {
     let tot = 0;
     let separators = this.getSeparators(str);
 
-    if (this.hasCustomSeparators(str)) {
-      str = str.substring(str.indexOf('\n') + 1);
-    }
+    if (this.hasCustomSeparators(str))
+      str = this.extractStringWithoutSeparators(str);
 
     const chars = str.split(new RegExp(`[${separators.join('')}]`));
 
@@ -18,6 +17,10 @@ export class StringCalculator {
     tot = chars.reduce((tot, curr) => tot + this.charToInt(curr), 0);
 
     return tot;
+  }
+
+  private extractStringWithoutSeparators(str: string): string {
+    return str.substring(str.indexOf('\n') + 1);
   }
 
   private hasCustomSeparators(str: string) {
