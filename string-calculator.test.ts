@@ -91,4 +91,26 @@ describe('String Calculator', () => {
       expect(res).toBe(expected);
     });
   });
+
+  describe('Custom Separators', () => {
+    it.each([{ input: '//;\n1;2', output: 6 }])(
+      'will give output $output when input is $input',
+      ({ input, output }) => {
+        // arrange
+
+        //sut
+        const sut = new StringCalculator();
+
+        const expected = output;
+
+        const entry = input;
+
+        //act
+        const res = sut.add(entry);
+
+        //assert
+        expect(res).toBe(expected);
+      }
+    );
+  });
 });
