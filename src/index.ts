@@ -22,7 +22,9 @@ export class StringCalculator {
     return str.split(new RegExp(`[${separators.join('')}]`));
   }
   private getSum(chars: string[]) {
-    const sum = chars.reduce((tot, curr) => tot + this.charToInt(curr), 0);
+    const sum = chars
+      .filter((char) => Number(char) <= 1000)
+      .reduce((tot, curr) => tot + this.charToInt(curr), 0);
     return sum;
   }
 
