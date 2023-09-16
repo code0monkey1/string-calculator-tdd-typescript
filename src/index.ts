@@ -4,14 +4,16 @@ export class StringCalculator {
     let tot = 0;
     let separators = ['\n', ','];
 
-    // if (str.startsWith('//')) {
-    //   const endIndex = str.indexOf('\n');
+    if (str.startsWith('//')) {
+      const endIndex = str.indexOf('\n');
 
-    //   const new_separators = str.substring(2, endIndex).split('');
+      const new_separators = str.substring(2, endIndex).split('');
 
-    //   console.log('new separators', new_separators);
-    //   separators = [...separators, ...new_separators];
-    // }
+      console.log('new separators', new_separators);
+
+      separators = [...separators, ...new_separators];
+      console.log('separators', separators);
+    }
 
     const chars = str.split(new RegExp(`[${separators.join('')}]`));
 
