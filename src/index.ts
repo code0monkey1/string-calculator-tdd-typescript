@@ -9,9 +9,7 @@ export class StringCalculator {
 
       separators = str.substring(2, endIndex).split('');
 
-      for (const sep in separators) {
-        str = str.replace(`sep`, ',');
-      }
+      console.log('separators', separators);
     }
     console.log(str);
     const chars = str.split(/`[,${separators}\n]`/);
