@@ -8,8 +8,12 @@ export class StringCalculator {
       const endIndex = str.indexOf('\n');
 
       separators = str.substring(2, endIndex).split('');
+
+      for (const sep in separators) {
+        str = str.replace(`sep`, ',');
+      }
     }
-    console.log(separators);
+    console.log(str);
     const chars = str.split(/`[,${separators}\n]`/);
 
     tot = chars.reduce((tot, curr) => tot + this.charToInt(curr), 0);
