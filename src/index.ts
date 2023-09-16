@@ -31,7 +31,7 @@ export class StringCalculator {
   public getSeparators(str: string): string[] {
     let separators = ['\n', ','];
 
-    if (str.startsWith('//')) {
+    if (this.hasCustomSeparators(str)) {
       const endIndex = str.indexOf('\n');
 
       const new_separators = str.substring(2, endIndex).split('');
