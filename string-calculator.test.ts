@@ -130,4 +130,21 @@ describe('String Calculator', () => {
       }).toThrowError(`negatives not allowed: ${output}`);
     });
   });
+
+  describe('Disallow numbers greater than 1000', () => {
+    it.each([{ input: '1001, 2', output: 2 }])(
+      'gives output: $output and ignores numbers greater than 1000 in input $input',
+      ({ input, output }) => {
+        //sut
+        const sut = new StringCalculator();
+
+        //act
+
+        //assert
+        expect(() => {
+          sut.add(input);
+        }).toThrowError(`negatives not allowed: ${output}`);
+      }
+    );
+  });
 });
