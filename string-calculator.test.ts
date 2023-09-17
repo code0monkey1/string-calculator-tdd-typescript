@@ -160,9 +160,9 @@ describe('String Calculator', () => {
     let str = 'a,b***c___d*e';
     let separators = ['***', '*', '___'];
 
-    separators.forEach((s) => {
+    for (const s of separators) {
       str = replaceAllStrings(str, s, ',');
-    });
+    }
     console.log('result', str);
   });
 
