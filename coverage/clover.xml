@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1694978592156" clover="3.2.0">
-  <project timestamp="1694978592156" name="All files">
+<coverage generated="1694978856280" clover="3.2.0">
+  <project timestamp="1694978856280" name="All files">
     <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3" elements="7" coveredelements="7" complexity="0" loc="4" ncloc="4" packages="1" files="1" classes="1"/>
     <file name="greeter.ts" path="/Users/chiranjeevthomas/Documents/string-calculator-tdd-typescript/greeter.ts">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>

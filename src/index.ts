@@ -6,8 +6,9 @@ export class StringCalculator {
 
     if (this.hasMultipleSeparators(str)) {
       const separatorString = this.getSeparatorString('//[', str);
-      console.log('separator string', separatorString);
 
+      const customSeparators = this.getIndividualSeparators(separatorString);
+      console.log(customSeparators);
       const separator = str.substring(3, str.indexOf(']'));
 
       str = this.extractStringWithoutSeparators(str);
@@ -77,6 +78,11 @@ export class StringCalculator {
     return tot;
   }
 
+  public getIndividualSeparators(separatorString: string) {
+    return separatorString
+      .match(/\[(.*?)\]/g)
+      ?.map((item) => item.slice(1, -1));
+  }
   public getSeparator(str: string): string[] {
     let separators = ['\n', ','];
 
