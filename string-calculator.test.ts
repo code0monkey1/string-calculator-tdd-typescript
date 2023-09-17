@@ -148,9 +148,8 @@ describe('String Calculator', () => {
   });
 
   test.only('learning', () => {
-    const str = '[*][%][***]';
-    const regex = /([^\[\]]*)/g;
-    const matches = str.match(regex);
-    console.log(matches); // Output: ["[*][%][***]"]
+    const str = '1***2***3';
+
+    console.log(str.split('***'));
   });
 });
