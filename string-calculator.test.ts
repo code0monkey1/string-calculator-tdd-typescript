@@ -160,4 +160,17 @@ describe('String Calculator', () => {
       .filter((item) => item !== '');
     console.log(result);
   });
+
+  test.only('learning', () => {
+    const inputString = '[*][,,,] [ooo]';
+    const pattern = /\[(.*?)\]/g;
+    const matches = [];
+
+    let match;
+    while ((match = pattern.exec(inputString)) !== null) {
+      matches.push(match[1]);
+    }
+
+    console.log(matches);
+  });
 });
