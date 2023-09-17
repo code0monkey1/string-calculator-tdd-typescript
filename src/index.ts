@@ -43,6 +43,10 @@ export class StringCalculator {
     return str.startsWith('//');
   }
 
+  private hasMultipleSeparators(str: string) {
+    return str.startsWith('//[');
+  }
+
   private hasNegative(chars: string[]) {
     return chars.some((char) => Number(char) < 0);
   }
