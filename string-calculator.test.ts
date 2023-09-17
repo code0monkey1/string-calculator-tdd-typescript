@@ -167,9 +167,8 @@ describe('String Calculator', () => {
     const result = inputString
       .split(delimiterPattern)
       .filter((item) => item !== '');
-    console.log(result);
+    expect(result).toEqual(['1', '2', '3', '5', '6']);
   });
-
   test('getSeparators', () => {
     const inputString = '//[***][__][*]';
     const pattern = /\[(.*?)\]/g;
