@@ -161,6 +161,9 @@ describe('String Calculator', () => {
     const delimiters = ['%', '___', '***'];
 
     // Function to escape special characters in a string for a regular expression
+    function escapeRegExp(str: string) {
+      return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
 
     // Create a regular expression pattern by joining and escaping the delimiters
     const delimiterPattern = new RegExp(
