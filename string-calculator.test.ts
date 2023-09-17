@@ -170,8 +170,8 @@ describe('String Calculator', () => {
     console.log(result);
   });
 
-  test('learning', () => {
-    const inputString = '//[***]';
+  test('getSeparators', () => {
+    const inputString = '//[***][__][*]';
     const pattern = /\[(.*?)\]/g;
     const matches = [];
 
