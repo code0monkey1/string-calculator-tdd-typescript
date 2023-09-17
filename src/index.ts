@@ -5,7 +5,7 @@ export class StringCalculator {
     let separators = ['\n', ','];
 
     if (this.hasMultipleSeparators(str)) {
-      const separatorString = str.substring(2, str.indexOf('\n'));
+      const separatorString = this.getSeparatorString('//[', str);
       console.log('separator string', separatorString);
 
       const separator = str.substring(3, str.indexOf(']'));
