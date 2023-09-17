@@ -61,7 +61,7 @@ export class StringCalculator {
   }
 
   private getSeparatorString(head: string, str: string) {
-    if (str.indexOf('/n') === -1) return ' ';
+    if (!str.split('').includes('\n')) return ' ';
     return str.substring(head.length, str.indexOf('/n'));
   }
 
