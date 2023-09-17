@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1694933484938" clover="3.2.0">
-  <project timestamp="1694933484938" name="All files">
-    <metrics statements="31" coveredstatements="5" conditionals="4" coveredconditionals="0" methods="17" coveredmethods="3" elements="52" coveredelements="8" complexity="0" loc="31" ncloc="31" packages="2" files="2" classes="2"/>
+<coverage generated="1694933571995" clover="3.2.0">
+  <project timestamp="1694933571995" name="All files">
+    <metrics statements="34" coveredstatements="5" conditionals="4" coveredconditionals="0" methods="19" coveredmethods="3" elements="57" coveredelements="8" complexity="0" loc="34" ncloc="34" packages="2" files="2" classes="2"/>
     <package name="string-calculator-tdd-typescript">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
       <file name="greeter.ts" path="/Users/chiranjeevthomas/Documents/string-calculator-tdd-typescript/greeter.ts">
@@ -13,9 +13,9 @@
       </file>
     </package>
     <package name="string-calculator-tdd-typescript.src">
-      <metrics statements="27" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="14" coveredmethods="0"/>
+      <metrics statements="30" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="16" coveredmethods="0"/>
       <file name="index.ts" path="/Users/chiranjeevthomas/Documents/string-calculator-tdd-typescript/src/index.ts">
-        <metrics statements="27" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="14" coveredmethods="0"/>
+        <metrics statements="30" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="16" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="4" count="0" type="stmt"/>
         <line num="6" count="0" type="cond" truecount="0" falsecount="1"/>
@@ -26,23 +26,26 @@
         <line num="16" count="0" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
         <line num="22" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
         <line num="27" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
         <line num="32" count="0" type="stmt"/>
-        <line num="36" count="0" type="stmt"/>
-        <line num="40" count="0" type="stmt"/>
-        <line num="44" count="0" type="stmt"/>
-        <line num="48" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="50" count="0" type="stmt"/>
-        <line num="52" count="0" type="stmt"/>
-        <line num="56" count="0" type="stmt"/>
-        <line num="58" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="55" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="57" count="0" type="stmt"/>
         <line num="59" count="0" type="stmt"/>
-        <line num="61" count="0" type="stmt"/>
         <line num="63" count="0" type="stmt"/>
+        <line num="65" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="66" count="0" type="stmt"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="70" count="0" type="stmt"/>
+        <line num="73" count="0" type="stmt"/>
       </file>
     </package>
   </project>

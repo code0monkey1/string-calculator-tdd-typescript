@@ -19,7 +19,14 @@ export class StringCalculator {
   }
 
   private getChars(str: string, separators: string[]) {
-    return str.split(new RegExp(`[${separators.join('')}]`));
+    const delimiterPattern = new RegExp(
+      separators.map((d) => `\\${d}`).join('|'),
+      'g'
+    );
+
+    const chars = str.split(delimiterPattern).filter((item) => item !== '');
+
+    return chars;
   }
   private getSum(chars: string[]) {
     const sum = chars
