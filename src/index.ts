@@ -7,6 +7,7 @@ export class StringCalculator {
     if (this.hasMultipleSeparators(str)) {
       const separatorString = str.substring(2, str.indexOf('\n'));
       console.log('separator string', separatorString);
+
       const separator = str.substring(3, str.indexOf(']'));
 
       str = this.extractStringWithoutSeparators(str);
@@ -78,19 +79,6 @@ export class StringCalculator {
     let tot = Number(char);
 
     return tot;
-  }
-
-  public getSeparators(str: string): string[] {
-    let separators = ['\n', ','];
-
-    const pattern = /\[(.*?)\]/g;
-    const matches = [];
-
-    let match;
-    while ((match = pattern.exec(str)) !== null) {
-      matches.push(match[1]);
-    }
-    return [...separators, ...matches];
   }
 
   public getSeparator(str: string): string[] {

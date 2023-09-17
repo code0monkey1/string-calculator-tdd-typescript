@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">75.51% </span>
+                <span class="strong">86.04% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>37/49</span>
+                <span class='fraction'>37/43</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">84.21% </span>
+                <span class="strong">88.88% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>16/19</span>
+                <span class='fraction'>16/18</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">75% </span>
+                <span class="strong">86.84% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>33/44</span>
+                <span class='fraction'>33/38</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -154,19 +154,7 @@
 <a name='L89'></a><a href='#L89'>89</a>
 <a name='L90'></a><a href='#L90'>90</a>
 <a name='L91'></a><a href='#L91'>91</a>
-<a name='L92'></a><a href='#L92'>92</a>
-<a name='L93'></a><a href='#L93'>93</a>
-<a name='L94'></a><a href='#L94'>94</a>
-<a name='L95'></a><a href='#L95'>95</a>
-<a name='L96'></a><a href='#L96'>96</a>
-<a name='L97'></a><a href='#L97'>97</a>
-<a name='L98'></a><a href='#L98'>98</a>
-<a name='L99'></a><a href='#L99'>99</a>
-<a name='L100'></a><a href='#L100'>100</a>
-<a name='L101'></a><a href='#L101'>101</a>
-<a name='L102'></a><a href='#L102'>102</a>
-<a name='L103'></a><a href='#L103'>103</a>
-<a name='L104'></a><a href='#L104'>104</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L92'></a><a href='#L92'>92</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -175,6 +163,7 @@
 <span class="cline-any cline-yes">17x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
@@ -252,19 +241,6 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -278,6 +254,7 @@
     if (this.hasMultipleSeparators(str)) {
       const separatorString = str.substring(2, str.indexOf('\n'));
       console.log('separator string', separatorString);
+&nbsp;
       const separator = str.substring(3, str.indexOf(']'));
 &nbsp;
       str = this.extractStringWithoutSeparators(str);
@@ -351,19 +328,6 @@
     return tot;
   }
 &nbsp;
-  public <span class="fstat-no" title="function not covered" >getSeparators(</span>str: string): string[] {
-    let separators = <span class="cstat-no" title="statement not covered" >['\n', ','];</span>
-&nbsp;
-    const pattern = <span class="cstat-no" title="statement not covered" >/\[(.*?)\]/g;</span>
-    const matches = <span class="cstat-no" title="statement not covered" >[];</span>
-&nbsp;
-    let match;
-<span class="cstat-no" title="statement not covered" >    while ((match = pattern.exec(str)) !== null) {</span>
-<span class="cstat-no" title="statement not covered" >      matches.push(match[1]);</span>
-    }
-<span class="cstat-no" title="statement not covered" >    return [...separators, ...matches];</span>
-  }
-&nbsp;
   public <span class="fstat-no" title="function not covered" >getSeparator(</span>str: string): string[] {
     let separators = <span class="cstat-no" title="statement not covered" >['\n', ','];</span>
 &nbsp;
@@ -379,7 +343,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-09-17T18:45:02.698Z
+                at 2023-09-17T18:56:37.580Z
             </div>
         <script src="../../prettify.js"></script>
         <script>
