@@ -12,7 +12,6 @@ export class StringCalculator {
       separators = [...separators, ...customSeparators];
     } else if (this.hasSingleSeparator(str)) {
       separators = [...separators, str.charAt(2)];
-      str = this.extractStringWithoutSeparators(str);
     }
 
     const chars = this.getChars(str, separators);
