@@ -39,7 +39,7 @@ export class StringCalculator {
     return str.substring(str.indexOf('\n') + 1);
   }
 
-  private hasCustomSeparators(str: string) {
+  private hasSingleSeparator(str: string) {
     return str.startsWith('//');
   }
 
