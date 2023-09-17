@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1694980339794" clover="3.2.0">
-  <project timestamp="1694980339794" name="All files">
+<coverage generated="1694980462738" clover="3.2.0">
+  <project timestamp="1694980462738" name="All files">
     <metrics statements="40" coveredstatements="36" conditionals="11" coveredconditionals="8" methods="20" coveredmethods="19" elements="71" coveredelements="63" complexity="0" loc="40" ncloc="40" packages="2" files="2" classes="2"/>
     <package name="string-calculator-tdd-typescript">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
