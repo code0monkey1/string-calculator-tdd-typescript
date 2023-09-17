@@ -1,11 +1,9 @@
 export class StringCalculator {
   constructor() {}
   public add(str: string): number {
-    let separators: string[] = [];
+    let separators = this.getSeparators(str);
 
     if (this.hasMultipleSeparators(str)) {
-      separators = this.getSeparators(str);
-      str = this.extractStringWithoutSeparators(str);
     } else if (this.hasSingleSeparator(str)) {
       separators = ['\n', ',', str.charAt(2)];
       str = this.extractStringWithoutSeparators(str);
