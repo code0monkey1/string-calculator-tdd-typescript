@@ -160,14 +160,17 @@ describe('String Calculator', () => {
     const inputString = '1%2%3___5***6';
     const delimiters = ['%', '___', '***'];
 
-    // Join the delimiters into a single regular expression pattern
-    const delimiterPattern = delimiters
-      .map((d) => d.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&'))
-      .join('|');
+    // Function to escape special characters in a string for a regular expression
+
+    // Create a regular expression pattern by joining and escaping the delimiters
+    const delimiterPattern = new RegExp(
+      delimiters.map((d) => escapeRegExp(d)).join('|'),
+      'g'
+    );
 
     // Split the inputString using the delimiterPattern and filter out empty strings
     const result = inputString
-      .split(new RegExp(`[${delimiterPattern}]`))
+      .split(delimiterPattern)
       .filter((item) => item !== '');
 
     console.log(result);
