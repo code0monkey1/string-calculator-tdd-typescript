@@ -62,14 +62,13 @@ export class StringCalculator {
   public getSeparators(str: string): string[] {
     let separators = ['\n', ','];
 
-    if (this.hasCustomSeparators(str)) {
-      const endIndex = str.indexOf('\n');
+    const pattern = /\[(.*?)\]/g;
+    const matches = [];
 
-      const new_separators = str.substring(2, endIndex).split('');
-
-      separators = [...separators, ...new_separators];
+    let match;
+    while ((match = pattern.exec(str)) !== null) {
+      matches.push(match[1]);
     }
-
-    return separators;
+    return [...separators, ...matches];
   }
 }
