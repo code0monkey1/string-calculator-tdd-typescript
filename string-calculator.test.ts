@@ -148,10 +148,14 @@ describe('String Calculator', () => {
   });
 
   test.only('learning', () => {
-    const separators = ['*', ',,,'];
-    const regex = new RegExp(`\\s*(${separators.join('|')})\\s*`, 'g');
-    const str = '2,,,4*,,,7';
-    const result = str.split(regex).filter((s) => s.trim() !== '');
-    console.log(result); // Output: ["2", "4", "7"]
+    const inputString = '1*2%3___5';
+    const delimiters = ['\\*', '%', '___'];
+    const delimiterPattern = new RegExp(
+      delimiters.map((d) => `\\${d}`).join('|'),
+      'g'
+    );
+
+    const result = inputString.split(delimiterPattern);
+    console.log(result);
   });
 });
