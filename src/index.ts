@@ -33,13 +33,9 @@ export class StringCalculator {
   }
 
   private getChars(str: string, separators: string[]) {
-    const delimiterPattern = new RegExp(
-      separators.map((d) => `\\${d}`).join('|')
-    );
+    for (let c of separators) str = str.split(c).join(',');
 
-    const chars = str.split(delimiterPattern).filter((item) => item !== '');
-
-    return chars;
+    return str.split(',');
   }
   private getSum(chars: string[]) {
     const sum = chars
