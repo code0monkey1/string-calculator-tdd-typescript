@@ -158,10 +158,24 @@ describe('String Calculator', () => {
 
   test('getChars', () => {
     let str = 'a,b,c';
-
-    const result = str.replace(/${,}/, '*');
+    let separators=["***","*","___"]
+   
+    separators.forEach(s => {
+      str = 
+    })
     console.log('result', result);
   });
+ public replaceAllStrings = (
+    str: string,
+    to_replace: string,
+    replace_with: string
+  ) => {
+    while (str.indexOf(to_replace) !== -1) {
+      str.replace(to_replace, replace_with);
+    }
+
+    return str;
+  };
 
   test('getSeparators', () => {
     const inputString = '//[***][__][*]';
