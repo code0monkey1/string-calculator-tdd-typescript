@@ -160,6 +160,7 @@ describe('String Calculator', () => {
     const inputString = '1%2%3___5***6';
     const delimiters = ['%', '___', '***'];
 
+    // Create a regular expression pattern by joining and escaping the delimiters
     const delimiterPattern = new RegExp(
       delimiters
         .map((d) => d.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&'))
@@ -167,9 +168,11 @@ describe('String Calculator', () => {
       'g'
     );
 
+    // Split the inputString using the delimiterPattern and filter out empty strings
     const result = inputString
       .split(delimiterPattern)
       .filter((item) => item !== '');
+
     console.log(result);
   });
   function escapeRegExp(str: string) {
