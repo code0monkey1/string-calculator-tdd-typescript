@@ -8,14 +8,8 @@ export class StringCalculator {
       const separatorString = this.getSeparatorString('//[', str);
 
       const customSeparators = this.getIndividualSeparators(separatorString);
-      console.log(customSeparators);
-      const separator = str.substring(3, str.indexOf(']'));
 
-      str = this.extractStringWithoutSeparators(str);
-
-      const splittedChars = str.split(separator);
-
-      return this.getSum(splittedChars);
+      separators = [...separators, ...customSeparators];
     } else if (this.hasSingleSeparator(str)) {
       separators = [...separators, str.charAt(2)];
       str = this.extractStringWithoutSeparators(str);
@@ -79,9 +73,14 @@ export class StringCalculator {
   }
 
   public getIndividualSeparators(separatorString: string) {
-    return separatorString
+    const customSeparators = separatorString
       .match(/\[(.*?)\]/g)
       ?.map((item) => item.slice(1, -1));
+
+    if (customSeparators === undefined) {
+      return [];
+    }
+    return customSeparators;
   }
   public getSeparator(str: string): string[] {
     let separators = ['\n', ','];
