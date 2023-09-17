@@ -3,8 +3,10 @@ export class StringCalculator {
   public add(str: string): number {
     let separators = this.getSeparators(str);
 
-    if (this.hasCustomSeparators(str))
+    if (this.hasMultipleSeparators(str)) {
+    } else if (this.hasSingleSeparator(str)) {
       str = this.extractStringWithoutSeparators(str);
+    }
 
     const chars = this.getChars(str, separators);
 
