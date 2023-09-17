@@ -1,10 +1,12 @@
 export class StringCalculator {
   constructor() {}
   public add(str: string): number {
-    let separators = this.getSeparators(str);
+    let separators = ['\n', ','];
 
     if (this.hasMultipleSeparators(str)) {
       console.log(str, ' hasMultipleSeparators');
+      separators = this.getSeparators(str);
+      str = this.extractStringWithoutSeparators(str);
     } else if (this.hasSingleSeparator(str)) {
       separators = ['\n', ',', str.charAt(2)];
       str = this.extractStringWithoutSeparators(str);
