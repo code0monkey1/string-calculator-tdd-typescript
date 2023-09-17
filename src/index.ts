@@ -4,6 +4,7 @@ export class StringCalculator {
   public add(str: string): number {
     let separators = ['\n', ','];
 
+    console.log(' separator string', this.getSeparatorString('//[', str));
     if (this.hasMultipleSeparators(str)) {
       const separator = str.substring(3, str.indexOf(']'));
 
@@ -59,6 +60,11 @@ export class StringCalculator {
 
   private hasNegative(chars: string[]) {
     return chars.some((char) => Number(char) < 0);
+  }
+
+  private getSeparatorString(head: string, str: string) {
+    if (str.indexOf('/n') === -1) return;
+    return str.substring(head.length, str.indexOf('/n'));
   }
 
   private getNegative(chars: string[]) {
