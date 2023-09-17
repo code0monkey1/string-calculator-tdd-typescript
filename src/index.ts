@@ -1,5 +1,16 @@
 export class StringCalculator {
   constructor() {}
+  private getCharsImpl(str: string, separators: string[]) {
+    const delimiterPattern = new RegExp(
+      separators
+        .map((d) => d.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&'))
+        .join('|'),
+      'g'
+    );
+
+    const result = str.split(delimiterPattern).filter((item) => item !== '');
+    return result;
+  }
   public add(str: string): number {
     let separators = ['\n', ','];
 
