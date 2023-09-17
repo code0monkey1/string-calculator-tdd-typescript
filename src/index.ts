@@ -7,6 +7,7 @@ export class StringCalculator {
     if (this.hasMultipleSeparators(str)) {
       const lastIndex = str.indexOf(']');
       const separator = str.substring(3, lastIndex);
+      console.log('separator is', separator);
       separators = [...separators, separator];
       str = this.extractStringWithoutSeparators(str);
     } else if (this.hasSingleSeparator(str)) {
