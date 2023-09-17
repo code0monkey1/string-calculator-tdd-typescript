@@ -5,9 +5,10 @@ export class StringCalculator {
     let separators = ['\n', ','];
 
     if (this.hasSingleSeparator(str)) {
-      separators = ['\n', ',', str.charAt(2)];
+      separators = [...separators, str.charAt(2)];
+      str = this.extractStringWithoutSeparators(str);
     }
-    str = this.extractStringWithoutSeparators(str);
+
     const chars = this.getChars(str, separators);
 
     if (this.hasNegative(chars))
