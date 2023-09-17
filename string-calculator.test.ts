@@ -156,7 +156,7 @@ describe('String Calculator', () => {
     });
   });
 
-  describe.skip('Multiple single-length separators', () => {
+  it('Multiple single-length separators', () => {
     //sut
     const sut = new StringCalculator();
 
