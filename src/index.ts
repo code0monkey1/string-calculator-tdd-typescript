@@ -7,7 +7,7 @@ export class StringCalculator {
     } else if (this.hasSingleSeparator(str)) {
       str = this.extractStringWithoutSeparators(str);
     }
-
+    console.log('separators', separators);
     const chars = this.getChars(str, separators);
 
     if (this.hasNegative(chars))
