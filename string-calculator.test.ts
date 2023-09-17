@@ -160,21 +160,18 @@ describe('String Calculator', () => {
     const inputString = '1%2%3___5***6';
     const delimiters = ['%', '___', '***'];
 
-    // Function to escape special characters in a string for a regular expression
-    function escapeRegExp(str: string) {
-      return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    }
-
-    const delimiterPattern = new RegExp(
-      delimiters.map((d) => escapeRegExp(d)).join('|'),
-      'g'
-    );
+    const escapedSeparators = delimiters.map((d) => escapeRegExp(d));
+    const delimiterPattern = new RegExp(escapedSeparators.join('|'), 'g');
 
     const result = inputString
       .split(delimiterPattern)
       .filter((item) => item !== '');
+
     console.log(result);
   });
+  function escapeRegExp(str: string) {
+    return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
   test('getSeparators', () => {
     const inputString = '//[***][__][*]';
     const pattern = /\[(.*?)\]/g;
