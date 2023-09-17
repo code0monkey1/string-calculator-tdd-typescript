@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">69.76% </span>
+                <span class="strong">76.31% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>30/43</span>
+                <span class='fraction'>29/38</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">78.94% </span>
+                <span class="strong">88.23% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>15/19</span>
+                <span class='fraction'>15/17</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">66.66% </span>
+                <span class="strong">73.52% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>26/39</span>
+                <span class='fraction'>25/34</span>
             </div>
         
             
@@ -147,23 +147,7 @@
 <a name='L82'></a><a href='#L82'>82</a>
 <a name='L83'></a><a href='#L83'>83</a>
 <a name='L84'></a><a href='#L84'>84</a>
-<a name='L85'></a><a href='#L85'>85</a>
-<a name='L86'></a><a href='#L86'>86</a>
-<a name='L87'></a><a href='#L87'>87</a>
-<a name='L88'></a><a href='#L88'>88</a>
-<a name='L89'></a><a href='#L89'>89</a>
-<a name='L90'></a><a href='#L90'>90</a>
-<a name='L91'></a><a href='#L91'>91</a>
-<a name='L92'></a><a href='#L92'>92</a>
-<a name='L93'></a><a href='#L93'>93</a>
-<a name='L94'></a><a href='#L94'>94</a>
-<a name='L95'></a><a href='#L95'>95</a>
-<a name='L96'></a><a href='#L96'>96</a>
-<a name='L97'></a><a href='#L97'>97</a>
-<a name='L98'></a><a href='#L98'>98</a>
-<a name='L99'></a><a href='#L99'>99</a>
-<a name='L100'></a><a href='#L100'>100</a>
-<a name='L101'></a><a href='#L101'>101</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L85'></a><a href='#L85'>85</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -211,10 +195,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">45x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -228,18 +208,6 @@
 <span class="cline-any cline-yes">38x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">38x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">16x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -310,10 +278,6 @@
     return str.startsWith('//');
   }
 &nbsp;
-  private <span class="fstat-no" title="function not covered" >hasMultipleSeparators(</span>str: string) {
-<span class="cstat-no" title="statement not covered" >    return str.startsWith('//[');</span>
-  }
-&nbsp;
   private hasNegative(chars: string[]) {
     return chars.some((char) =&gt; Number(char) &lt; 0);
   }
@@ -329,18 +293,6 @@
 &nbsp;
     return tot;
   }
-&nbsp;
-  public replaceAllStrings = <span class="fstat-no" title="function not covered" >(</span>
-    str: string,
-    to_replace: string,
-    replace_with: string
-  ) =&gt; {
-<span class="cstat-no" title="statement not covered" >    while (str.indexOf(to_replace) !== -1) {</span>
-<span class="cstat-no" title="statement not covered" >      str.replace(to_replace, replace_with);</span>
-    }
-&nbsp;
-<span class="cstat-no" title="statement not covered" >    return str;</span>
-  };
 &nbsp;
   public <span class="fstat-no" title="function not covered" >getSeparators(</span>str: string): string[] {
     let separators = <span class="cstat-no" title="statement not covered" >['\n', ','];</span>
@@ -370,7 +322,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-09-17T15:52:20.229Z
+                at 2023-09-17T17:29:17.114Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

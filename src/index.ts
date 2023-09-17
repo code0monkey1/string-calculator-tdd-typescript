@@ -6,9 +6,8 @@ export class StringCalculator {
 
     if (this.hasSingleSeparator(str)) {
       separators = ['\n', ',', str.charAt(2)];
-      str = this.extractStringWithoutSeparators(str);
     }
-
+    str = this.extractStringWithoutSeparators(str);
     const chars = this.getChars(str, separators);
 
     if (this.hasNegative(chars))
@@ -45,10 +44,6 @@ export class StringCalculator {
     return str.startsWith('//');
   }
 
-  private hasMultipleSeparators(str: string) {
-    return str.startsWith('//[');
-  }
-
   private hasNegative(chars: string[]) {
     return chars.some((char) => Number(char) < 0);
   }
@@ -64,18 +59,6 @@ export class StringCalculator {
 
     return tot;
   }
-
-  public replaceAllStrings = (
-    str: string,
-    to_replace: string,
-    replace_with: string
-  ) => {
-    while (str.indexOf(to_replace) !== -1) {
-      str.replace(to_replace, replace_with);
-    }
-
-    return str;
-  };
 
   public getSeparators(str: string): string[] {
     let separators = ['\n', ','];
