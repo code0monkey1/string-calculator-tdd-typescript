@@ -142,4 +142,17 @@ describe('String Calculator', () => {
       }
     );
   });
+
+  describe(' Arbitrary-length separators', () => {
+    test('Add("//[***]\n1***2***3")  gives 6', () => {
+      //sut
+      const sut = new StringCalculator();
+
+      //act
+      const res = sut.add('//[***]\n1***2***3');
+
+      //assert
+      expect(res).toBe(6);
+    });
+  });
 });
