@@ -180,6 +180,6 @@ describe('String Calculator', () => {
       matches.push(match[1]);
     }
 
-    console.log(matches);
+    console.log('Matches', matches);
   });
 });
