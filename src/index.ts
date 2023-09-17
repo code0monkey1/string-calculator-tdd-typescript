@@ -4,8 +4,6 @@ export class StringCalculator {
   public add(str: string): number {
     let separators = ['\n', ','];
 
-    console.log(' separator string', this.getSeparatorString('//[', str));
-
     if (this.hasMultipleSeparators(str)) {
       const separator = str.substring(3, str.indexOf(']'));
 
