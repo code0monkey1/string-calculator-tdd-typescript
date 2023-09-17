@@ -175,7 +175,7 @@ describe('String Calculator', () => {
   });
 
   test('learning', () => {
-    const inputString = '[*][,,,] [ooo]';
+    const inputString = '[*][,,,][ooo]';
     const pattern = /\[(.*?)\]/g;
     const matches = [];
 
