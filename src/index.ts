@@ -1,14 +1,13 @@
 export class StringCalculator {
   constructor() {}
   public add(str: string): number {
-    let separators: string[] = [];
+    let separators = this.getSeparators(str);
 
     if (this.hasMultipleSeparators(str)) {
-      separators = this.getSeparators(str);
     } else if (this.hasSingleSeparator(str)) {
-      separators = this.getSeparator(str);
+      str = this.extractStringWithoutSeparators(str);
     }
-    str = this.extractStringWithoutSeparators(str);
+
     const chars = this.getChars(str, separators);
 
     if (this.hasNegative(chars))
