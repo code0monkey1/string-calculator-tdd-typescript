@@ -157,25 +157,14 @@ describe('String Calculator', () => {
   });
 
   test('getChars', () => {
-    let str = 'a,b,c';
-    let separators=["***","*","___"]
-   
-    separators.forEach(s => {
-      str = 
-    })
-    console.log('result', result);
-  });
- public replaceAllStrings = (
-    str: string,
-    to_replace: string,
-    replace_with: string
-  ) => {
-    while (str.indexOf(to_replace) !== -1) {
-      str.replace(to_replace, replace_with);
-    }
+    let str = 'a,b***c___d*e';
+    let separators = ['***', '*', '___'];
 
-    return str;
-  };
+    separators.forEach((s) => {
+      str = replaceAllStrings(str, s, ',');
+    });
+    console.log('result', str);
+  });
 
   test('getSeparators', () => {
     const inputString = '//[***][__][*]';
@@ -190,3 +179,15 @@ describe('String Calculator', () => {
     console.log('Matches', matches);
   });
 });
+
+const replaceAllStrings = (
+  str: string,
+  to_replace: string,
+  replace_with: string
+) => {
+  while (str.indexOf(to_replace) !== -1) {
+    str.replace(to_replace, replace_with);
+  }
+
+  return str;
+};
