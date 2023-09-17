@@ -101,15 +101,11 @@ describe('String Calculator', () => {
         //sut
         const sut = new StringCalculator();
 
-        const expected = output;
-
-        const entry = input;
-
         //act
-        const res = sut.add(entry);
+        const res = sut.add(input);
 
         //assert
-        expect(res).toBe(expected);
+        expect(res).toBe(output);
       }
     );
   });
