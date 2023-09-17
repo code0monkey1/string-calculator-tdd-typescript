@@ -157,18 +157,10 @@ describe('String Calculator', () => {
   });
 
   test('getChars', () => {
-    const extractStringChars = (str: string, separators: string[]) => {
-      const regex = new RegExp(`[${separators.join('')}]`, 'g');
-      const matches = str.split(regex);
-      return matches.filter((match) => match !== '');
-    };
+    let str = 'a,b,c';
 
-    const str = '1\n2***3,4';
-    const separators = ['\n', ',', '***'];
-
-    const result = extractStringChars(str, separators);
-
-    console.log(result); // ["1", "2", "3", "4"]
+    const result = str.replace(',', '*');
+    console.log('result', result);
   });
 
   test('getSeparators', () => {
