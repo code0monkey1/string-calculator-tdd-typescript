@@ -168,7 +168,7 @@ describe('String Calculator', () => {
   // });
 
   it('learning test for getting separators', () => {
-    const str = '[*][%]'; // Assume this function returns a string or null
+    const str = '[*][%][foo][ba]'; // Assume this function returns a string or null
     console.log('string is not null');
     const array = str.match(/\[(.*?)\]/g)?.map((item) => item.slice(1, -1));
     console.log(array); // Output: ["foo", "bar"]
