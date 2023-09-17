@@ -152,6 +152,6 @@ describe('String Calculator', () => {
     const regex = new RegExp(`\\s*(${separators.join('|')})\\s*`, 'g');
     const str = '2,,,4*,,,7';
     const result = str.split(regex).filter((s) => s.trim() !== '');
-    console.log(result); // Output: ["2", "4", "7"]
+    console.log(result);
   });
 });
