@@ -156,15 +156,17 @@ describe('String Calculator', () => {
     });
   });
 
-  it('Multiple single-length separators', () => {
-    //sut
-    const sut = new StringCalculator();
+  describe('Multiple single-length separators', () => {
+    it('//[*][%]\n1*2%3', () => {
+      //sut
+      const sut = new StringCalculator();
 
-    //act
-    const res = sut.add('//[*][%]\n1*2%3');
+      //act
+      const res = sut.add('//[*][%]\n1*2%3');
 
-    //assert
-    expect(res).toBe(6);
+      //assert
+      expect(res).toBe(6);
+    });
   });
 
   it('learning test for getting separators', () => {
