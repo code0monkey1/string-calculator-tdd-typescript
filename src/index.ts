@@ -62,7 +62,7 @@ export class StringCalculator {
 
   private getSeparatorString(head: string, str: string) {
     if (!str.split('').includes('\n')) return ' ';
-    return str.substring(head.length, str.indexOf('/n'));
+    return str.substring(head.length - 1, str.indexOf('\n'));
   }
 
   private getNegative(chars: string[]) {
