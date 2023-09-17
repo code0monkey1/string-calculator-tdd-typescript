@@ -163,15 +163,12 @@ describe('String Calculator', () => {
       return matches.filter((match) => match !== '');
     };
 
-    const str1 = '1\n2***3,4';
-    const str2 = '1***2,3\n4';
+    const str = '1\n2***3,4';
     const separators = ['\n', ',', '***'];
 
-    const result1 = extractStringChars(str1, separators);
-    const result2 = extractStringChars(str2, separators);
+    const result = extractStringChars(str, separators);
 
-    console.log(result1); // ["1", "2", "3", "4"]
-    console.log(result2); // ["1", "2", "3", "4"]
+    console.log(result); // ["1", "2", "3", "4"]
   });
 
   test('getSeparators', () => {
