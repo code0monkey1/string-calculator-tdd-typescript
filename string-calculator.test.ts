@@ -172,5 +172,14 @@ describe('String Calculator', () => {
     console.log('string is not null');
     const array = str.match(/\[(.*?)\]/g)?.map((item) => item.slice(1, -1));
     console.log(array); // Output: ["foo", "bar"]
+    let toSplit = 'a*b%cfoodba';
+    if (array) {
+      for (let c of array) {
+        toSplit = toSplit.split(c).join(',');
+      }
+      console.log('toSplitString', toSplit);
+    }
+
+    console.log(str);
   });
 });
