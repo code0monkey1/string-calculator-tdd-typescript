@@ -143,7 +143,7 @@ describe('String Calculator', () => {
     );
   });
 
-  describe.skip('Arbitrary-length separators', () => {
+  describe('Arbitrary-length separators', () => {
     it('return the sum to be 6 , when given "//[***]\n1***2***3"', () => {
       //sut
       const sut = new StringCalculator();
