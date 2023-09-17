@@ -27,6 +27,7 @@ export class StringCalculator {
   }
 
   private getChars(str: string, separators: string[]) {
+    console.log('get chars string', str);
     for (let c of separators) str = str.split(c).join(',');
 
     return str.split(',');
