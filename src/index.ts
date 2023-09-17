@@ -27,8 +27,7 @@ export class StringCalculator {
 
   private getChars(str: string, separators: string[]) {
     const delimiterPattern = new RegExp(
-      separators.map((d) => `\\${d}`).join('|'),
-      'g'
+      separators.map((d) => `\\${d}`).join('|')
     );
 
     const chars = str.split(delimiterPattern).filter((item) => item !== '');
