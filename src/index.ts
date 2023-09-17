@@ -4,17 +4,14 @@ export class StringCalculator {
   public add(str: string): number {
     let separators = ['\n', ','];
 
-    if (this.hasSingleSeparator(str)) {
-      let separatorString = '';
-      if (this.hasMultipleSeparators(str)) {
-        separatorString = this.getSeparatorString('//[', str);
-      } else {
-        separatorString = this.getSeparatorString('//', str);
-      }
+    if (this.hasMultipleSeparators(str)) {
+      const separatorString = this.getSeparatorString('//[', str);
 
       const customSeparators = this.getIndividualSeparators(separatorString);
 
       separators = [...separators, ...customSeparators];
+    } else if (this.hasSingleSeparator(str)) {
+      separators = [...separators, str.charAt(2)];
     }
 
     const chars = this.getChars(str, separators);
