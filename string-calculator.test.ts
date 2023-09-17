@@ -156,5 +156,14 @@ describe('String Calculator', () => {
     });
   });
 
-  describe('Multiple single-length separators', () => {});
+  describe('Multiple single-length separators', () => {
+    //sut
+    const sut = new StringCalculator();
+
+    //act
+    const res = sut.add('//[*][%]\n1*2%3');
+
+    //assert
+    expect(res).toBe(6);
+  });
 });
