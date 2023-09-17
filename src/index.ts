@@ -8,6 +8,7 @@ export class StringCalculator {
       const separator = str.substring(3, str.indexOf(']'));
 
       str = this.extractStringWithoutSeparators(str);
+
       const splittedChars = str.split(separator);
 
       return this.getSum(splittedChars);
