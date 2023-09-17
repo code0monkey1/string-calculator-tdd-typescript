@@ -5,7 +5,7 @@ export class StringCalculator {
 
     if (this.hasMultipleSeparators(str)) {
     } else if (this.hasSingleSeparator(str)) {
-      console.log(str, 'has single separator');
+      separators = ['\n', ',', str.charAt(2)];
       str = this.extractStringWithoutSeparators(str);
     }
     console.log('separators', separators);
