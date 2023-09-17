@@ -148,10 +148,19 @@ describe('String Calculator', () => {
   });
 
   describe('Arbitrary-length separators', () => {
-    it('return the sum to be 6 , when given "//[***]\n1***2***3"', () => {});
+    it('return the sum to be 6 , when given "//[***]\n1***2***3"', () => {
+      //sut
+      const sut = new StringCalculator();
+
+      //act
+      const res = sut.add('//[***]\n1***2***3');
+
+      //assert
+      expect(res).toBe(6);
+    });
   });
 
-  test.only('learning', () => {
+  test('learning', () => {
     const inputString = '1*2%3___5';
     const delimiters = ['*', '%', '___'];
     const delimiterPattern = new RegExp(
@@ -165,7 +174,7 @@ describe('String Calculator', () => {
     console.log(result);
   });
 
-  test.only('learning', () => {
+  test('learning', () => {
     const inputString = '[*][,,,] [ooo]';
     const pattern = /\[(.*?)\]/g;
     const matches = [];
