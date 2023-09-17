@@ -70,6 +70,11 @@ export class StringCalculator {
     return tot;
   }
 
+  public replaceAllChars=(str:string,char:string,with:string)=>{
+
+
+  }
+
   public getSeparators(str: string): string[] {
     let separators = ['\n', ','];
 
