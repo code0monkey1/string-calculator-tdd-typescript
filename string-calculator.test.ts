@@ -155,4 +155,6 @@ describe('String Calculator', () => {
       expect(res).toBe(6);
     });
   });
+
+  describe('Multiple single-length separators', () => {});
 });
