@@ -42,10 +42,6 @@ export class StringCalculator {
     return str.startsWith('//[');
   }
 
-  private extractStringWithoutSeparators(str: string): string {
-    return str.substring(str.indexOf('\n') + 1);
-  }
-
   private hasSingleSeparator(str: string) {
     return str.startsWith('//');
   }

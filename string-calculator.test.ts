@@ -169,6 +169,19 @@ describe('String Calculator', () => {
     });
   });
 
+  describe('Multiple single-length separators', () => {
+    it('"//[foo][bar]\n1foo2bar3" returns 6', () => {
+      //sut
+      const sut = new StringCalculator();
+
+      //act
+      const res = sut.add('//[foo][bar]\n1foo2bar3');
+
+      //assert
+      expect(res).toBe(6);
+    });
+  });
+
   it('learning test for getting separators', () => {
     const str = '[*][%][foo][ba]'; // Assume this function returns a string or null
     console.log('string is not null');
