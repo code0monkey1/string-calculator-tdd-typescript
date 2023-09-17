@@ -5,15 +5,14 @@ export class StringCalculator {
     let separators = ['\n', ','];
 
     if (this.hasMultipleSeparators(str)) {
-      console.log(str, ' hasMultipleSeparators');
       separators = this.getSeparators(str);
-      console.log('has multiple seperators', separators);
+
       str = this.extractStringWithoutSeparators(str);
     } else if (this.hasSingleSeparator(str)) {
       separators = ['\n', ',', str.charAt(2)];
       str = this.extractStringWithoutSeparators(str);
     }
-    console.log('separators', separators);
+
     const chars = this.getChars(str, separators);
 
     if (this.hasNegative(chars))
