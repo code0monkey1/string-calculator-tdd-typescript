@@ -156,7 +156,7 @@ describe('String Calculator', () => {
     });
   });
 
-  test('learning', () => {
+  test('getChars', () => {
     const inputString = '1*2%3___5';
     const delimiters = ['*', '%', '___'];
     const delimiterPattern = new RegExp(
