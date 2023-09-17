@@ -71,15 +71,15 @@ export class StringCalculator {
   }
 
   public replaceAllStrings = (
-    of: string,
+    str: string,
     to_replace: string,
     replace_with: string
   ) => {
-    while (of.indexOf(to_replace) !== -1) {
-      of.replace(to_replace, replace_with);
+    while (str.indexOf(to_replace) !== -1) {
+      str.replace(to_replace, replace_with);
     }
 
-    return of;
+    return str;
   };
 
   public getSeparators(str: string): string[] {
