@@ -149,7 +149,7 @@ describe('String Calculator', () => {
 
   test.only('learning', () => {
     const str = '[*][%][***]';
-    const regex = /\[(.*?)\]/g;
+    const regex = /\[([^\[\]]*)\](?=\s*\[|\s*$)/g;
     const matches = str.match(regex);
     console.log(matches); // Output: ["[*][%][***]"]
   });
