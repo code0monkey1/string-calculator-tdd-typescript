@@ -166,4 +166,13 @@ describe('String Calculator', () => {
     //assert
     expect(res).toBe(6);
   });
+
+  describe('learning test for getting separators', () => {
+    const str: string | null = '[*][%]'; // Assume this function returns a string or null
+
+    if (str !== null) {
+      const array = str.match(/\[(.*?)\]/g)?.map((item) => item.slice(1, -1));
+      console.log(array); // Output: ["foo", "bar"]
+    }
+  });
 });
