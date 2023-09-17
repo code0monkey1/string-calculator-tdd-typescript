@@ -9,7 +9,7 @@ export class StringCalculator {
 
       str = this.extractStringWithoutSeparators(str);
       const splittedChars = str.split(separator);
-      console.log('splittedChars', splittedChars);
+      return this.getSum(splittedChars);
     } else if (this.hasSingleSeparator(str)) {
       separators = [...separators, str.charAt(2)];
       str = this.extractStringWithoutSeparators(str);
