@@ -70,10 +70,17 @@ export class StringCalculator {
     return tot;
   }
 
-  public replaceAllChars=(str:string,char:string,with:string)=>{
+  public replaceAllStrings = (
+    of: string,
+    to_replace: string,
+    replace_with: string
+  ) => {
+    while (of.indexOf(to_replace) !== -1) {
+      of.replace(to_replace, replace_with);
+    }
 
-
-  }
+    return of;
+  };
 
   public getSeparators(str: string): string[] {
     let separators = ['\n', ','];
