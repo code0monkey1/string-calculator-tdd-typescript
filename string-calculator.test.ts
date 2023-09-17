@@ -159,7 +159,7 @@ describe('String Calculator', () => {
   test('getChars', () => {
     let str = 'a,b,c';
 
-    const result = str.replace(',', '*');
+    const result = str.replace(/${,}/, '*');
     console.log('result', result);
   });
 
