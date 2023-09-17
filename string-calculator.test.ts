@@ -149,13 +149,15 @@ describe('String Calculator', () => {
 
   test.only('learning', () => {
     const inputString = '1*2%3___5';
-    const delimiters = ['\\*', '%', '___'];
+    const delimiters = ['*', '%', '___'];
     const delimiterPattern = new RegExp(
       delimiters.map((d) => `\\${d}`).join('|'),
       'g'
     );
 
-    const result = inputString.split(delimiterPattern);
+    const result = inputString
+      .split(delimiterPattern)
+      .filter((item) => item !== '');
     console.log(result);
   });
 });
