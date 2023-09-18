@@ -77,11 +77,11 @@ export class StringCalculator {
     }
     return customSeparators;
   }
-  public getSeparator(str: string): string[] {
-    let separators = ['\n', ','];
+  // public getSeparator(str: string): string[] {
+  //   let separators = ['\n', ','];
 
-    const separator = str.charAt(2);
+  //   const separator = str.charAt(2);
 
-    return [...separators, separator];
-  }
+  //   return [...separators, separator];
+  // }
 }
